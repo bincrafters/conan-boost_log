@@ -2,7 +2,7 @@
 
 [Conan.io](https://conan.io) package for [Boost.Log](https://github.com/Boostorg/Log) project
 
-The packages generated with this **conanfile** can be found in [Bintray](https://bintray.com/bincrafters/conan-public/Boost.Log%3Abincrafters).
+The packages generated with this **conanfile** can be found in [Bintray](https://bintray.com/bincrafters/public-conan/Boost.Log%3Abincrafters).
 
 ## For Users: Use this package
 
