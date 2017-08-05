@@ -3,11 +3,13 @@ from conans import ConanFile, tools, os
 class BoostLogConan(ConanFile):
     name = "Boost.Log"
     version = "1.64.0"
-    generators = "txt"
+    generators = "txt" 
+    settings = "os", "arch", "compiler", "build_type"
     url = "https://github.com/boostorg/log"
     description = "Please visit http://www.boost.org/doc/libs/1_64_0/libs/libraries.htm"
     license = "www.boost.org/users/license.html"
     lib_short_name = "log"
+    build_requires = "Boost.Build/1.64.0@bincrafters/testing" 
     requires =  "Boost.Array/1.64.0@bincrafters/testing", \
                       "Boost.Assert/1.64.0@bincrafters/testing", \
                       "Boost.Atomic/1.64.0@bincrafters/testing", \
