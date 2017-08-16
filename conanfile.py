@@ -11,7 +11,9 @@ class BoostLogConan(ConanFile):
     license = "www.boost.org/users/license.html"
     lib_short_names = ["log"]
     build_requires = "Boost.Generator/0.0.1@bincrafters/testing"
-    requires =  "Boost.Array/1.64.0@bincrafters/testing", \
+    requires =  "Boost.Align/1.64.0@bincrafters/testing", \
+                      "Boost.Array/1.64.0@bincrafters/testing", \
+                      "Boost.Asio/1.64.0@bincrafters/testing", \
                       "Boost.Assert/1.64.0@bincrafters/testing", \
                       "Boost.Atomic/1.64.0@bincrafters/testing", \
                       "Boost.Bind/1.64.0@bincrafters/testing", \
@@ -22,6 +24,7 @@ class BoostLogConan(ConanFile):
                       "Boost.Filesystem/1.64.0@bincrafters/testing", \
                       "Boost.Function_Types/1.64.0@bincrafters/testing", \
                       "Boost.Fusion/1.64.0@bincrafters/testing", \
+                      "Boost.Interprocess/1.64.0@bincrafters/testing", \
                       "Boost.Intrusive/1.64.0@bincrafters/testing", \
                       "Boost.Iterator/1.64.0@bincrafters/testing", \
                       "Boost.Lexical_Cast/1.64.0@bincrafters/testing", \
