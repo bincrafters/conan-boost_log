@@ -12,7 +12,7 @@ class BoostLogConan(ConanFile):
     lib_short_names = ["log"]
     options = {"shared": [True, False]}
     default_options = "shared=False"
-    build_requires = "Boost.Generator/0.0.1@bincrafters/testing"
+    build_requires = "Boost.Generator/1.64.0@bincrafters/testing"
     requires =  "Boost.Align/1.64.0@bincrafters/testing", \
                       "Boost.Array/1.64.0@bincrafters/testing", \
                       "Boost.Asio/1.64.0@bincrafters/testing", \
