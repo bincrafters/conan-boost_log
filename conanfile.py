@@ -12,47 +12,47 @@ class BoostLogConan(ConanFile):
     lib_short_names = ["log"]
     options = {"shared": [True, False]}
     default_options = "shared=False"
-    build_requires = "Boost.Generator/1.65.1@bincrafters/testing"
-    requires =  "Boost.Align/1.65.1@bincrafters/testing", \
-                      "Boost.Array/1.65.1@bincrafters/testing", \
-                      "Boost.Asio/1.65.1@bincrafters/testing", \
-                      "Boost.Assert/1.65.1@bincrafters/testing", \
-                      "Boost.Atomic/1.65.1@bincrafters/testing", \
-                      "Boost.Bind/1.65.1@bincrafters/testing", \
-                      "Boost.Config/1.65.1@bincrafters/testing", \
-                      "Boost.Core/1.65.1@bincrafters/testing", \
-                      "Boost.Date_Time/1.65.1@bincrafters/testing", \
-                      "Boost.Exception/1.65.1@bincrafters/testing", \
-                      "Boost.Filesystem/1.65.1@bincrafters/testing", \
-                      "Boost.Function_Types/1.65.1@bincrafters/testing", \
-                      "Boost.Fusion/1.65.1@bincrafters/testing", \
-                      "Boost.Interprocess/1.65.1@bincrafters/testing", \
-                      "Boost.Intrusive/1.65.1@bincrafters/testing", \
-                      "Boost.Iterator/1.65.1@bincrafters/testing", \
-                      "Boost.Lexical_Cast/1.65.1@bincrafters/testing", \
-                      "Boost.Locale/1.65.1@bincrafters/testing", \
-                      "Boost.Move/1.65.1@bincrafters/testing", \
-                      "Boost.Mpl/1.65.1@bincrafters/testing", \
-                      "Boost.Optional/1.65.1@bincrafters/testing", \
-                      "Boost.Parameter/1.65.1@bincrafters/testing", \
-                      "Boost.Phoenix/1.65.1@bincrafters/testing", \
-                      "Boost.Predef/1.65.1@bincrafters/testing", \
-                      "Boost.Preprocessor/1.65.1@bincrafters/testing", \
-                      "Boost.Property_Tree/1.65.1@bincrafters/testing", \
-                      "Boost.Proto/1.65.1@bincrafters/testing", \
-                      "Boost.Range/1.65.1@bincrafters/testing", \
-                      "Boost.Regex/1.65.1@bincrafters/testing", \
-                      "Boost.Smart_Ptr/1.65.1@bincrafters/testing", \
-                      "Boost.Spirit/1.65.1@bincrafters/testing", \
-                      "Boost.Static_Assert/1.65.1@bincrafters/testing", \
-                      "Boost.System/1.65.1@bincrafters/testing", \
-                      "Boost.Thread/1.65.1@bincrafters/testing", \
-                      "Boost.Throw_Exception/1.65.1@bincrafters/testing", \
-                      "Boost.Type_Index/1.65.1@bincrafters/testing", \
-                      "Boost.Type_Traits/1.65.1@bincrafters/testing", \
-                      "Boost.Utility/1.65.1@bincrafters/testing", \
-                      "Boost.Winapi/1.65.1@bincrafters/testing", \
-                      "Boost.Xpressive/1.65.1@bincrafters/testing"
+    build_requires = "Boost.Generator/1.65.1@bincrafters/stable"
+    requires =  "Boost.Align/1.65.1@bincrafters/stable", \
+                      "Boost.Array/1.65.1@bincrafters/stable", \
+                      "Boost.Asio/1.65.1@bincrafters/stable", \
+                      "Boost.Assert/1.65.1@bincrafters/stable", \
+                      "Boost.Atomic/1.65.1@bincrafters/stable", \
+                      "Boost.Bind/1.65.1@bincrafters/stable", \
+                      "Boost.Config/1.65.1@bincrafters/stable", \
+                      "Boost.Core/1.65.1@bincrafters/stable", \
+                      "Boost.Date_Time/1.65.1@bincrafters/stable", \
+                      "Boost.Exception/1.65.1@bincrafters/stable", \
+                      "Boost.Filesystem/1.65.1@bincrafters/stable", \
+                      "Boost.Function_Types/1.65.1@bincrafters/stable", \
+                      "Boost.Fusion/1.65.1@bincrafters/stable", \
+                      "Boost.Interprocess/1.65.1@bincrafters/stable", \
+                      "Boost.Intrusive/1.65.1@bincrafters/stable", \
+                      "Boost.Iterator/1.65.1@bincrafters/stable", \
+                      "Boost.Lexical_Cast/1.65.1@bincrafters/stable", \
+                      "Boost.Locale/1.65.1@bincrafters/stable", \
+                      "Boost.Move/1.65.1@bincrafters/stable", \
+                      "Boost.Mpl/1.65.1@bincrafters/stable", \
+                      "Boost.Optional/1.65.1@bincrafters/stable", \
+                      "Boost.Parameter/1.65.1@bincrafters/stable", \
+                      "Boost.Phoenix/1.65.1@bincrafters/stable", \
+                      "Boost.Predef/1.65.1@bincrafters/stable", \
+                      "Boost.Preprocessor/1.65.1@bincrafters/stable", \
+                      "Boost.Property_Tree/1.65.1@bincrafters/stable", \
+                      "Boost.Proto/1.65.1@bincrafters/stable", \
+                      "Boost.Range/1.65.1@bincrafters/stable", \
+                      "Boost.Regex/1.65.1@bincrafters/stable", \
+                      "Boost.Smart_Ptr/1.65.1@bincrafters/stable", \
+                      "Boost.Spirit/1.65.1@bincrafters/stable", \
+                      "Boost.Static_Assert/1.65.1@bincrafters/stable", \
+                      "Boost.System/1.65.1@bincrafters/stable", \
+                      "Boost.Thread/1.65.1@bincrafters/stable", \
+                      "Boost.Throw_Exception/1.65.1@bincrafters/stable", \
+                      "Boost.Type_Index/1.65.1@bincrafters/stable", \
+                      "Boost.Type_Traits/1.65.1@bincrafters/stable", \
+                      "Boost.Utility/1.65.1@bincrafters/stable", \
+                      "Boost.Winapi/1.65.1@bincrafters/stable", \
+                      "Boost.Xpressive/1.65.1@bincrafters/stable"
 
                       #array3 assert1 atomic4 bind3 config0 core2 date_time11 exception5 filesystem8 function_types5 fusion5 intrusive6 iterator5 lexical_cast8 locale6 move3 mpl5 optional5 parameter10 phoenix9 predef0 preprocessor0 property_tree13 proto8 range7 regex6 smart_ptr4 spirit11 static_assert1 system3 thread11 throw_exception2 type_index5 type_traits3 utility5 winapi1 xpressive9
                       
