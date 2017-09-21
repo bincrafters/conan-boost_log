@@ -1,7 +1,7 @@
-#include <boost/log/sources/logger.hpp>
+#include <boost/log/utility/setup/common_attributes.hpp>
 
 int main()
 {
-	boost::log::sources::logger lg;
+	boost::log::add_common_attributes();
 }
 
