@@ -1,57 +1,64 @@
-from conans import ConanFile
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from conans import ConanFile, tools
 
 
 class BoostLogConan(ConanFile):
-    name = "Boost.Log"
+    name = "boost_log"
     version = "1.66.0"
-
+    url = "https://github.com/bincrafters/conan-boost-log"
+    
+    lib_short_names = ["log"]
+    is_header_only = False
+    
     options = {"shared": [True, False]}
     default_options = "shared=False"
 
-    requires = \
-        "Boost.Align/1.66.0@bincrafters/testing", \
-        "Boost.Array/1.66.0@bincrafters/testing", \
-        "Boost.Asio/1.66.0@bincrafters/testing", \
-        "Boost.Assert/1.66.0@bincrafters/testing", \
-        "Boost.Atomic/1.66.0@bincrafters/testing", \
-        "Boost.Bind/1.66.0@bincrafters/testing", \
-        "Boost.Config/1.66.0@bincrafters/testing", \
-        "Boost.Core/1.66.0@bincrafters/testing", \
-        "Boost.Date_Time/1.66.0@bincrafters/testing", \
-        "Boost.Exception/1.66.0@bincrafters/testing", \
-        "Boost.Filesystem/1.66.0@bincrafters/testing", \
-        "Boost.Function_Types/1.66.0@bincrafters/testing", \
-        "Boost.Fusion/1.66.0@bincrafters/testing", \
-        "Boost.Interprocess/1.66.0@bincrafters/testing", \
-        "Boost.Intrusive/1.66.0@bincrafters/testing", \
-        "Boost.Iterator/1.66.0@bincrafters/testing", \
-        "Boost.Lexical_Cast/1.66.0@bincrafters/testing", \
-        "Boost.Locale/1.66.0@bincrafters/testing", \
-        "Boost.Move/1.66.0@bincrafters/testing", \
-        "Boost.Mpl/1.66.0@bincrafters/testing", \
-        "Boost.Optional/1.66.0@bincrafters/testing", \
-        "Boost.Parameter/1.66.0@bincrafters/testing", \
-        "Boost.Phoenix/1.66.0@bincrafters/testing", \
-        "Boost.Predef/1.66.0@bincrafters/testing", \
-        "Boost.Preprocessor/1.66.0@bincrafters/testing", \
-        "Boost.Property_Tree/1.66.0@bincrafters/testing", \
-        "Boost.Proto/1.66.0@bincrafters/testing", \
-        "Boost.Range/1.66.0@bincrafters/testing", \
-        "Boost.Regex/1.66.0@bincrafters/testing", \
-        "Boost.Smart_Ptr/1.66.0@bincrafters/testing", \
-        "Boost.Spirit/1.66.0@bincrafters/testing", \
-        "Boost.Static_Assert/1.66.0@bincrafters/testing", \
-        "Boost.System/1.66.0@bincrafters/testing", \
-        "Boost.Thread/1.66.0@bincrafters/testing", \
-        "Boost.Throw_Exception/1.66.0@bincrafters/testing", \
-        "Boost.Type_Index/1.66.0@bincrafters/testing", \
-        "Boost.Type_Traits/1.66.0@bincrafters/testing", \
-        "Boost.Utility/1.66.0@bincrafters/testing", \
-        "Boost.Winapi/1.66.0@bincrafters/testing", \
-        "Boost.Xpressive/1.66.0@bincrafters/testing"
+    requires = (
+        "boost_package_tools/1.66.0@bincrafters/testing",
+        "boost_align/1.66.0@bincrafters/testing",
+        "boost_array/1.66.0@bincrafters/testing",
+        "boost_asio/1.66.0@bincrafters/testing",
+        "boost_assert/1.66.0@bincrafters/testing",
+        "boost_atomic/1.66.0@bincrafters/testing",
+        "boost_bind/1.66.0@bincrafters/testing",
+        "boost_config/1.66.0@bincrafters/testing",
+        "boost_core/1.66.0@bincrafters/testing",
+        "boost_date_time/1.66.0@bincrafters/testing",
+        "boost_exception/1.66.0@bincrafters/testing",
+        "boost_filesystem/1.66.0@bincrafters/testing",
+        "boost_function_types/1.66.0@bincrafters/testing",
+        "boost_fusion/1.66.0@bincrafters/testing",
+        "boost_interprocess/1.66.0@bincrafters/testing",
+        "boost_intrusive/1.66.0@bincrafters/testing",
+        "boost_iterator/1.66.0@bincrafters/testing",
+        "boost_lexical_cast/1.66.0@bincrafters/testing",
+        "boost_locale/1.66.0@bincrafters/testing",
+        "boost_move/1.66.0@bincrafters/testing",
+        "boost_mpl/1.66.0@bincrafters/testing",
+        "boost_optional/1.66.0@bincrafters/testing",
+        "boost_parameter/1.66.0@bincrafters/testing",
+        "boost_phoenix/1.66.0@bincrafters/testing",
+        "boost_predef/1.66.0@bincrafters/testing",
+        "boost_preprocessor/1.66.0@bincrafters/testing",
+        "boost_property_tree/1.66.0@bincrafters/testing",
+        "boost_proto/1.66.0@bincrafters/testing",
+        "boost_range/1.66.0@bincrafters/testing",
+        "boost_regex/1.66.0@bincrafters/testing",
+        "boost_smart_ptr/1.66.0@bincrafters/testing",
+        "boost_spirit/1.66.0@bincrafters/testing",
+        "boost_static_assert/1.66.0@bincrafters/testing",
+        "boost_system/1.66.0@bincrafters/testing",
+        "boost_thread/1.66.0@bincrafters/testing",
+        "boost_throw_exception/1.66.0@bincrafters/testing",
+        "boost_type_index/1.66.0@bincrafters/testing",
+        "boost_type_traits/1.66.0@bincrafters/testing",
+        "boost_utility/1.66.0@bincrafters/testing",
+        "boost_winapi/1.66.0@bincrafters/testing",
+        "boost_xpressive/1.66.0@bincrafters/testing"
+    )
 
-    lib_short_names = ["log"]
-    is_header_only = False
 
     def package_info_after(self):
         if self.options.shared:
@@ -65,44 +72,40 @@ class BoostLogConan(ConanFile):
 
     # BEGIN
 
-    url = "https://github.com/bincrafters/conan-boost-log"
     description = "Please visit http://www.boost.org/doc/libs/1_66_0"
-    license = "www.boost.org/users/license.html"
-    build_requires = "Boost.Generator/1.66.0@bincrafters/testing"
+    license = "BSL-1.0"
     short_paths = True
     generators = "boost"
     settings = "os", "arch", "compiler", "build_type"
-    exports = "boostgenerator.py"
+    build_requires = "boost_generator/1.66.0@bincrafters/testing"
 
     def package_id(self):
-        getattr(self, "package_id_after", lambda:None)()
+        getattr(self, "package_id_additional", lambda:None)()
+
     def source(self):
-        self.call_patch("source")
+        with tools.pythonpath(self):
+            import boost_package_tools  # pylint: disable=F0401
+            boost_package_tools.source(self)
+        getattr(self, "source_additional", lambda:None)()
+
     def build(self):
-        self.call_patch("build")
+        with tools.pythonpath(self):
+            import boost_package_tools  # pylint: disable=F0401
+            boost_package_tools.build(self)
+        getattr(self, "build_additional", lambda:None)()
+
     def package(self):
-        self.call_patch("package")
+        with tools.pythonpath(self):
+            import boost_package_tools  # pylint: disable=F0401
+            boost_package_tools.package(self)
+        getattr(self, "package_additional", lambda:None)()
+
     def package_info(self):
-        self.call_patch("package_info")
-    def call_patch(self, method, *args):
-        if not hasattr(self, '__boost_conan_file__'):
-            try:
-                from conans import tools
-                with tools.pythonpath(self):
-                    import boostgenerator  # pylint: disable=F0401
-                    boostgenerator.BoostConanFile(self)
-            except Exception as e:
-                self.output.error("Failed to import boostgenerator for: "+str(self)+" @ "+method.upper())
-                raise e
-        return getattr(self, method, lambda:None)(*args)
-    @property
-    def env(self):
-        import os.path
-        result = super(self.__class__, self).env
-        result['PYTHONPATH'] = [os.path.dirname(__file__)] + result.get('PYTHONPATH',[])
-        return result
-    @property
-    def build_policy_missing(self):
-        return (getattr(self, 'is_in_cycle_group', False) and not getattr(self, 'is_header_only', True)) or super(self.__class__, self).build_policy_missing
+        with tools.pythonpath(self):
+            import boost_package_tools  # pylint: disable=F0401
+            boost_package_tools.package_info(self)
+        getattr(self, "package_info_additional", lambda:None)()
+
+
 
     # END
