@@ -17,9 +17,7 @@ class BoostLogConan(ConanFile):
 
     requires = (
         "boost_package_tools/1.66.0@bincrafters/testing",
-        "boost_align/1.66.0@bincrafters/testing",
         "boost_array/1.66.0@bincrafters/testing",
-        "boost_asio/1.66.0@bincrafters/testing",
         "boost_assert/1.66.0@bincrafters/testing",
         "boost_atomic/1.66.0@bincrafters/testing",
         "boost_bind/1.66.0@bincrafters/testing",
@@ -30,7 +28,6 @@ class BoostLogConan(ConanFile):
         "boost_filesystem/1.66.0@bincrafters/testing",
         "boost_function_types/1.66.0@bincrafters/testing",
         "boost_fusion/1.66.0@bincrafters/testing",
-        "boost_interprocess/1.66.0@bincrafters/testing",
         "boost_intrusive/1.66.0@bincrafters/testing",
         "boost_iterator/1.66.0@bincrafters/testing",
         "boost_lexical_cast/1.66.0@bincrafters/testing",
