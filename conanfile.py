@@ -60,7 +60,7 @@ class BoostLogConan(ConanFile):
     )
 
 
-    def package_info_after(self):
+    def package_info_additional(self):
         if self.options.shared:
             self.cpp_info.defines.append("BOOST_LOG_DYN_LINK=1")
             self.cpp_info.defines.append("BOOST_LOG_SETUP_DYN_LINK=1")
