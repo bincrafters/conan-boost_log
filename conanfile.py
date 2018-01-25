@@ -8,7 +8,8 @@ class BoostLogConan(ConanFile):
     name = "boost_log"
     version = "1.66.0"
     url = "https://github.com/bincrafters/conan-boost_log"
-    
+    author = "Bincrafters <bincrafters@gmail.com>"
+    exports = ["LICENSE.md"]
     lib_short_names = ["log"]
     is_header_only = False
     
