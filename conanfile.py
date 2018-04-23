@@ -15,6 +15,14 @@ class BoostLogConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=False"
 
+    source_only_deps = [
+        "align",
+        "asio",
+        "interprocess",
+        "io",
+        "random"
+    ]
+
     requires = (
         "boost_array/1.67.0@bincrafters/testing",
         "boost_assert/1.67.0@bincrafters/testing",
