@@ -13,6 +13,9 @@ class TestPackageConan(ConanFile):
         boost_deps = ['array', 'assert', 'atomic', 'bind', 'config', 'container', 'core', 'date_time', 'exception', 'filesystem', 'function_types', 'fusion', 'intrusive', 'iterator', 'lexical_cast', 'locale', 'log', 'move', 'mpl', 'optional', 'parameter', 'phoenix', 'predef', 'preprocessor', 'property_tree', 'proto', 'range', 'regex', 'smart_ptr', 'spirit', 'static_assert', 'system', 'thread', 'throw_exception', 'type_index', 'type_traits', 'utility', 'winapi', 'xpressive']
         for lib in boost_deps:
             self.requires("boost_" + lib + "/1.67.0@" + self.user + "/" + self.channel)
+        if False:
+            if not tools.os_info.is_windows:
+                self.requires("openmpi/3.0.0@bincrafters/stable")
 
     def build(self):
         cmake = CMake(self)
