@@ -59,11 +59,12 @@ class BoostLogConan(base.BoostBaseConan):
         "boost_winapi",
         "boost_xpressive"
     ]
-
-    def build_requirements(self):
-        self.build_requires("boost_align")
-        self.build_requires("boost_asio")
-        self.build_requires("boost_interprocess")
+    
+    b2_build_requires = [
+        "boost_align",
+        "boost_asio",
+        "boost_interprocess",
+    ]
 
     def package_info_additional(self):
         if self.options.shared:
