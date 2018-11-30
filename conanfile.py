@@ -4,7 +4,7 @@
 from conans import python_requires
 
 
-base = python_requires("boost_base/1.67.0@bincrafters/testing")
+base = python_requires("boost_base/1.68.0@bincrafters/testing")
 
 class BoostLogConan(base.BoostBaseConan):
     name = "boost_log"
@@ -59,11 +59,10 @@ class BoostLogConan(base.BoostBaseConan):
         "boost_winapi",
         "boost_xpressive"
     ]
-    
     b2_build_requires = [
         "boost_align",
         "boost_asio",
-        "boost_interprocess",
+        "boost_interprocess"
     ]
 
     def package_info_additional(self):
@@ -75,5 +74,3 @@ class BoostLogConan(base.BoostBaseConan):
                 self.cpp_info.defines.append("BOOST_LOG_NO_THREADS=1")
         except:
             pass
-
-
