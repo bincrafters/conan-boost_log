@@ -4,7 +4,7 @@
 from conans import python_requires
 
 
-base = python_requires("boost_base/1.68.0@bincrafters/testing")
+base = python_requires("boost_base/1.69.0@bincrafters/testing")
 
 class BoostLogConan(base.BoostBaseConan):
     name = "boost_log"
@@ -16,8 +16,7 @@ class BoostLogConan(base.BoostBaseConan):
         "align",
         "asio",
         "interprocess",
-        "io",
-        "random"
+        "io"
     ]
     b2_requires = [
         "boost_array",
@@ -45,6 +44,7 @@ class BoostLogConan(base.BoostBaseConan):
         "boost_preprocessor",
         "boost_property_tree",
         "boost_proto",
+        "boost_random",
         "boost_range",
         "boost_regex",
         "boost_smart_ptr",
