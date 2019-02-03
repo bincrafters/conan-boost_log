@@ -8,6 +8,7 @@ base = python_requires("boost_base/1.69.0@bincrafters/stable")
 
 class BoostLogConan(base.BoostBaseConan):
     name = "boost_log"
+    version = "1.69.0"
     url = "https://github.com/bincrafters/conan-boost_log"
     lib_short_names = ["log"]
     options = {"shared": [True, False]}
@@ -69,8 +70,3 @@ class BoostLogConan(base.BoostBaseConan):
         if self.options.shared:
             self.cpp_info.defines.append("BOOST_LOG_DYN_LINK=1")
             self.cpp_info.defines.append("BOOST_LOG_SETUP_DYN_LINK=1")
-        try:
-            if not self.settings.threads:
-                self.cpp_info.defines.append("BOOST_LOG_NO_THREADS=1")
-        except:
-            pass
