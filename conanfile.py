@@ -4,69 +4,19 @@
 from conans import python_requires
 
 
-base = python_requires("boost_base/1.69.0@bincrafters/testing")
+base = python_requires("boost_base/2.0.0@bincrafters/testing")
+
 
 class BoostLogConan(base.BoostBaseConan):
     name = "boost_log"
-    version = "1.69.0"
-    url = "https://github.com/bincrafters/conan-boost_log"
-    lib_short_names = ["log"]
-    options = {"shared": [True, False]}
-    default_options = "shared=False"
-    source_only_deps = [
-        "align",
-        "asio",
-        "interprocess",
-        "io"
-    ]
-    b2_requires = [
-        "boost_array",
-        "boost_assert",
-        "boost_atomic",
-        "boost_bind",
-        "boost_config",
-        "boost_container",
-        "boost_core",
-        "boost_date_time",
-        "boost_exception",
-        "boost_filesystem",
-        "boost_function_types",
-        "boost_fusion",
-        "boost_intrusive",
-        "boost_iterator",
-        "boost_lexical_cast",
-        "boost_locale",
-        "boost_move",
-        "boost_mpl",
-        "boost_optional",
-        "boost_parameter",
-        "boost_phoenix",
-        "boost_predef",
-        "boost_preprocessor",
-        "boost_property_tree",
-        "boost_proto",
-        "boost_random",
-        "boost_range",
-        "boost_regex",
-        "boost_smart_ptr",
-        "boost_spirit",
-        "boost_static_assert",
-        "boost_system",
-        "boost_thread",
-        "boost_throw_exception",
-        "boost_type_index",
-        "boost_type_traits",
-        "boost_utility",
-        "boost_winapi",
-        "boost_xpressive"
-    ]
-    b2_build_requires = [
-        "boost_align",
-        "boost_asio",
-        "boost_interprocess"
-    ]
+    version = "1.70.0"
 
-    def package_info_additional(self):
+    @property
+    def boost_build_requires(self):
+        return ["align", "asio", "interprocess"]
+
+    def package_info(self):
+        super(BoostLogConan, self).package_info()
         if self.options.shared:
             self.cpp_info.defines.append("BOOST_LOG_DYN_LINK=1")
             self.cpp_info.defines.append("BOOST_LOG_SETUP_DYN_LINK=1")
